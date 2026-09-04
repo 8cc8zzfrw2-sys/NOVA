@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./style.css">
+<title>NOVA</title>
+</head>
+<body>
+<main class="app">
+<header><div><small>NOVA COMMAND CENTER</small><h1>NOVA</h1></div><button id="power">OFF</button></header>
+<section class="hero"><div class="orb"></div><div><b id="state">NOVA待機中</b><p id="status">停止中</p></div></section>
+
+<section class="card">
+<h2>司令塔</h2>
+<select id="leader"><option>iPhone</option><option>PC</option><option>Web</option><option>手動</option></select>
+</section>
+
+<section class="card">
+<h2>コマンド</h2>
+<textarea id="command" placeholder="例：現在地を教えて / カメラを起動 / 5分タイマー / メモを追加"></textarea>
+<div class="row"><button id="voice">🎙️ 音声入力</button><button id="run">▶ 実行</button></div>
+<pre id="output">NOVA v5 準備完了。</pre>
+</section>
+
+<section class="grid">
+<button data-f="camera">📷<span>カメラ / OCR</span></button>
+<button data-f="mic">🎙️<span>音声アシスタント</span></button>
+<button data-f="location">📍<span>位置情報</span></button>
+<button data-f="record">🎥<span>録音 / 録画</span></button>
+<button data-f="connect">📶<span>ネットワーク診断</span></button>
+<button data-f="performance">⚡<span>システム診断</span></button>
+<button data-f="ai">🤖<span>AIチャット</span></button>
+<button data-f="notes">📝<span>メモ</span></button>
+<button data-f="timer">⏱️<span>タイマー</span></button>
+<button data-f="game">🎮<span>ゲームツール</span></button>
+<button data-f="reminder">🔔<span>リマインダー</span></button>
+</section>
+
+<section class="card"><h2>機能状態</h2><div id="features"></div></section>
+</main>
+
+<div id="panel" class="panel hidden"><div class="panelbox">
+<button id="closePanel" class="close">×</button><h2 id="panelTitle">NOVA</h2><div id="panelBody"></div>
+</div></div>
+<script src="./app.js"></script>
+</body>
+</html>
